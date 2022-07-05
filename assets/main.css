@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.burguermenu{
+    width: 20px;
+}
+.menucontent{
+    display: none;
+}
+.logocontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    height: 70px;
+}
+.btn-primary{
+    background-color: #00766c !important;
+}
+.logo{
+    display: flex;
+    width: 150px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.page-link{
+    color: #00766c !important;
+}
+#page {
+    display: grid;
+    grid-template-areas: "nav"
+                         "head"
+                         "main"
+                         "pagination"
+                         "foot";
+  }
+  
+  #page > header {
+    grid-area: head;
+    background-color: #e2e2e2;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #page .barra {
+    grid-area: nav;
+    background-color: #26a69a;
+  }
+ #page .navigation{
+    grid-area: pagination;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+ }
+  #page > main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+#page > footer {
+    color: white;
+    grid-area: foot;
+    background-color: #00766c;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+.card-body{
+    text-align: center;
+}
+.logocontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    color: white;
+}
+
+.itemNone{
+    display: none !important;
+}
+
+@media (min-width: 576px) {
+    .itemNone{
+        display: flex !important;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 900px;
+        grid-template-areas: "nav head"
+                            "nav  main"
+                            "foot  pagination";
+        grid-template-rows: 105px 1fr 30px;
+        grid-template-columns: 290px 1fr;
+    }
+    .menucontent{   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        color: #FFFFFF;
+    }
+    .burguermenu{
+        display: none !important;
+    }
+    
+    #page > main {
+        align-items: flex-start;
+    }
+}
