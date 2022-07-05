@@ -30,6 +30,7 @@
 .page-link{
     color: #00766c !important;
 }
+
 #page {
     display: grid;
     grid-template-areas: "nav"
